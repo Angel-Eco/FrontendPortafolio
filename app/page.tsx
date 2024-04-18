@@ -8,17 +8,8 @@ import { nFormatter } from "@/lib/utils";
 import Skills from "./skills";
 import Example from "./test";
 import Techstacks from "./techstack";
-
-const getData = async() =>{
-  const response=await fetch('http://localhost:8000/posts/');
-  //const data = await response.json()
-  //console.log(data)
-  return response.json();
-
-} 
  
-export default async function Home() {  
-  const apiData = await getData();
+export default async function Home() {    
   const { stargazers_count: stars } = await fetch(
     "https://api.github.com/repos/steven-tey/precedent",
     {
@@ -76,7 +67,7 @@ export default async function Home() {
         >
           <a
             className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
-            href="/user"
+            href="https://github.com/steven-tey/precedent"
             target="_blank"
             rel="noopener noreferrer"
           >
