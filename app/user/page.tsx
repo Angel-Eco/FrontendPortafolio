@@ -1,23 +1,12 @@
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 
-
-const getData = async() =>{
-    const response=await fetch('http://localhost:8000/posts/',
-        { next: { revalidate: 1 } },
-    );
-    //const data = await response.json()
-    console.log(response)
-    return response.json();
-
-} 
-
 const User = async() =>{
     const session = await getServerSession();
     if (!session || !session.user || session.user.email!==process.env.USER_ADMIN_EMAIL) {
         redirect("/");
     }
-    const apiData = await getData();
+    
     return(
         <div className="z-10 w-full mt-1">
             <h1 className="text-base">My Skills</h1>
@@ -30,8 +19,7 @@ const User = async() =>{
         I'm not just a Developer, I'm help our World to defeat the crisis climate 
         </p>
         </div>
-
-        {JSON.stringify(apiData)}
+       
         </div>
 
         
