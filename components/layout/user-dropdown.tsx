@@ -10,20 +10,7 @@ import { Session } from "next-auth";
 export default function UserDropdown({ session }: { session: Session }) {
   const { email, image } = session?.user || {};
   const [openPopover, setOpenPopover] = useState(false);
-  console.log(session)
-  console.log("prueba 1")
-  console.log(email)
-  console.log("prueba 2")
-  console.log(process.env.USER_ADMIN_EMAIL)
-  let test=0
-  if(email===process.env.USER_ADMIN_EMAIL)
-    test=1
-    console.log("prueba 3")
-  if(email==process.env.USER_ADMIN_EMAIL)
-    console.log("prueba 4")
 
-  console.log(test)
-  //const email_admin=process.env.USER_ADMIN_EMAIL
   let email_admin = process.env.USER_ADMIN_EMAIL
 
   if (!email) 

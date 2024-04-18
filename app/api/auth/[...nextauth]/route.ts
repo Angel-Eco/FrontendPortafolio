@@ -2,7 +2,9 @@ import NextAuth, { NextAuthOptions, getServerSession } from "next-auth";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "@/lib/prisma";
 import GoogleProvider from "next-auth/providers/google";
+import authOptions from "./option"
 
+/*
 const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
@@ -34,6 +36,7 @@ const authOptions: NextAuthOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
 };
+*/
 
 const handler = NextAuth(authOptions);
 
