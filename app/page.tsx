@@ -1,6 +1,6 @@
 import Card from "@/components/home/card";
 import { DEPLOY_URL } from "@/lib/constants";
-import { Github, Twitter } from "@/components/shared/icons";
+import { Github, Twitter} from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
@@ -8,10 +8,11 @@ import { nFormatter } from "@/lib/utils";
 import Skills from "./skills";
 import Example from "./test";
 import Techstacks from "./techstack";
- 
+import { Instagram, Linkedin, Download  } from 'lucide-react';
+
 export default async function Home() {    
   const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/steven-tey/precedent",
+    "https://api.github.com/repos/Angel-Eco/dataScience",
     {
       ...(process.env.GITHUB_OAUTH_TOKEN && {
         headers: {
@@ -30,13 +31,13 @@ export default async function Home() {
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <a
-          href="https://twitter.com/steventey/status/1613928948915920896"
+          href="https://www.instagram.com/relajeiro/"
           target="_blank"
           rel="noreferrer"
           className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
         >
-          <Twitter className="h-5 w-5 text-[#1d9bf0]" />
-          <p className="text-sm font-semibold text-[#1d9bf0]">
+          <Instagram className="h-5 w-5 text-[#000000]" />          
+          <p className="text-sm font-semibold text-[#5d5db0]">
             Instagram
           </p>
         </a>
@@ -50,7 +51,7 @@ export default async function Home() {
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-          Un apasionado Ingeniero de Software, enfocado a la entrega de soluciones
+          Ingeniero de Software, enfocado a la entrega de soluciones
           rápidas, priorizando el manejo de datos mediante tecnologías a la 
           vanguardia.
           Una colección de soluciones y alternativas para tus proyectos
@@ -67,33 +68,21 @@ export default async function Home() {
         >
           <a
             className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
-            href="https://github.com/steven-tey/precedent"
+            href="https://resumencv.s3.ap-southeast-2.amazonaws.com/Data+Engineer+-+Angel+Espinoza.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg
-              className="h-4 w-4 group-hover:text-black"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 4L20 20H4L12 4Z"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+ 
+            <Download />
             <p>Download Resume</p>
           </a>
           <a
             className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
-            href="https://github.com/steven-tey/precedent"
+            href="https://www.linkedin.com/in/espinozaangel/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github />
+            <Linkedin />
             <p>
               <span className="hidden sm:inline-block">Check</span> Linkedin{" "}
               <span className="font-semibold">{nFormatter(stars)}</span>
@@ -127,7 +116,7 @@ const features = [
   {
     title: "Ecokumen",
     description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+      "Description",
     demo: (
       <div className="flex items-center justify-center space-x-20">
         <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
@@ -138,13 +127,13 @@ const features = [
   {
     title: "Proyecto 2",
     description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+      "Description",
       demo: <WebVitals />,
   },
   {
     title: "Proyecto 3",
     description:
-      "Precedent comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+      "Description",
     demo: (
       <div className="flex items-center justify-center space-x-20">
         <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
