@@ -1,30 +1,30 @@
 "use client";
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon, AcademicCapIcon, CalculatorIcon } from '@heroicons/react/24/outline'
 
 const features = [
     {
       name: 'Liderazgo',
       description:
-        'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
-      icon: CloudArrowUpIcon,
+        'Motivación al equipo de trabajo mediante una comunicación eficaz y respeto a sus pares. Inteligencia emocional y habilidades para resolver problemas.',
+      icon: AcademicCapIcon,
     },
     {
-      name: 'Escalabilidad',
+      name: 'Trabajo en equipo',
       description:
-        'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
+        'Experiencia con distintas personas, equipos y culturas de trabajo, mejorando y generando un ambiente más comunicativo.',
       icon: LockClosedIcon,
     },
     {
-      name: 'Simpleza',
+      name: 'Gestión del tiempo',
       description:
-        'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+        'Una buena organización para cumplir plazos de entrega. Uso de software y metodologías de trabajo para el logro de metas eficazmente.',
       icon: ArrowPathIcon,
     },
     {
-      name: 'Eficiencia',
+      name: 'Innovación y creatividad',
       description:
-        'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-      icon: FingerPrintIcon,
+        'Ideas frescas e innovadoras que se ajustan a los requerimientos proporcionados',
+      icon: CalculatorIcon,
     },
   ]
 

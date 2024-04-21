@@ -10,10 +10,10 @@ import {Providers} from './providers'
 
 
 export const metadata = {
-  title: "¨Portafolio Angel",
+  title: "Angel",
   description:
     "Resume",
-  metadataBase: new URL("https://precedent.dev")
+  metadataBase: new URL("https://frontend-portafolio-two.vercel.app/")
 };
 
 export default async function RootLayout({
